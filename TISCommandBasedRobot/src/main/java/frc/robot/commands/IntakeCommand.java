@@ -32,8 +32,6 @@ public class IntakeCommand extends CommandBase {
         intakeSubsystem.intakeBall(0.3);
         intakeSubsystem.intakeSolenoid.set(true);
         SmartDashboard.putNumber("Intake RPM", (60*IntakeSubsystem.ballIntake.getSelectedSensorVelocity()/(Constants.sensorPosititons)));
-        
-        // intakeSubsystem.feedBall();
 
         // Feeder Starts
          if (intakeSubsystem.detectBeamBreaker1() == true || intakeSubsystem.detectBeamBreaker2()==true) {
